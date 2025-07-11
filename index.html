@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <style>
+      /* Reset i osnovni stil */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f4f7f8;
+        color: #333;
+        line-height: 1.6;
+      }
+      header {
+        background: #0d6efd;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+      nav a:hover {
+        color: #ffd54f;
+      }
+      main {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      section {
+        margin-bottom: 60px;
+      }
+      h2 {
+        color: #0d6efd;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #0d6efd;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+      /* O meni */
+      #about p {
+        max-width: 700px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      /* Projekti */
+      #projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .project-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease;
+      }
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      .project-card h3 {
+        margin-bottom: 10px;
+        color: #0d6efd;
+      }
+      .project-card p {
+        color: #666;
+      }
+      /* Veštine */
+      #skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      .skill {
+        background: #0d6efd;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 2px 8px rgba(13, 110, 253, 0.4);
+        user-select: none;
+      }
+      /* Kontakt */
+      #contact form {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      #contact label {
+        font-weight: 600;
+        color: #333;
+      }
+      #contact input,
+      #contact textarea {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        resize: vertical;
+      }
+      #contact input:focus,
+      #contact textarea:focus {
+        border-color: #0d6efd;
+        outline: none;
+      }
+      #contact button {
+        background: #0d6efd;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      #contact button:hover {
+        background: #094ec3;
+      }
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 15px 0;
+        background: #e9ecef;
+        color: #555;
+        font-size: 0.9rem;
+        user-select: none;
+      }
+      /* Responsive */
+      @media (max-width: 600px) {
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+        #skills {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tamara Cvetkovska</h1>
+      <nav>
+        <a href="#about">O meni</a>
+        <a href="#projects">Projekti</a>
+        <a href="#skills">Veštine</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>O meni</h2>
+        <p>
+          Zdravo! Ja sam Tamara, entuzijasta u oblasti programiranja i web
+          dizajna. Volim da učim nove tehnologije i stvaram korisne i lepe
+          projekte.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projekti</h2>
+        <div class="project-card">
+          <h3>Web shop</h3>
+          <p>Jednostavan web shop napravljen u PHP-u i MySQL bazi.</p>
+        </div>
+        <div class="project-card">
+          <h3>Portfolio sa HTML/CSS</h3>
+          <p>
+            Moderna portfolio stranica sa prilagođenim dizajnom i animacijama.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Blog platforma</h3>
+          <p>
+            CMS sistem za pisanje i objavljivanje blogova sa korisničkim
+            loginom.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Veštine</h2>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">PHP</div>
+        <div class="skill">MySQL</div>
+        <div class="skill">Laravel</div>
+      </section>
+
+      <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+          <label for="name">Ime</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Vaše ime"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Vaša email adresa"
+            required
+          />
+
+          <label for="message">Poruka</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Vaša poruka"
+            required
+          ></textarea>
+
+          <button type="submit">Pošalji</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>&copy; 2025 Tamara Cvetkovska. Sva prava zadržana.</footer>
+  </body>
+</html>
